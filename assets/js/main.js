@@ -1,0 +1,43 @@
+// chiedere all'utente la sua email
+
+// controlla che sia nella lista di chi può accedere
+
+//stampa un messaggio appropriato sull'esito del controllo
+
+// genera un numero random da 1 a 6 sia per il giocatore sia per il computer
+
+// stabilire chi è il vincitore in base a chi fa il punteggio più alto
+
+/* STRUMENTI
+
+- prompt
+
+- array
+
+- innerHTML 
+
+- math(random) da 1 a 6
+
+*/
+
+const askEmail = prompt('Inserisci la tua email');
+/* console.log(askEmail); */
+
+// chiedo il nome 
+const askName = prompt('Qual è il tuo nome?');
+
+
+// se il nome rientra tra questi allora stampo "puoi accedere"
+const iscritti = ['marco', 'emanuele', 'luca'];
+
+for (let i = 0; i < iscritti.length; i++) {
+
+    let iscrizioni = document.querySelector('.iscrizioni')
+
+    if (askName == iscritti) {
+        iscrizioni.innerHTML += `<p>Puoi accedere</p>`
+    } else if (askName != iscritti) {
+        iscrizioni.innerHTML += `<p>Non puoi accedere</p>`
+    }
+
+}

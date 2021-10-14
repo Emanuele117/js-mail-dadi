@@ -23,21 +23,26 @@
 const askEmail = prompt('Inserisci la tua email');
 /* console.log(askEmail); */
 
-// chiedo il nome 
-const askName = prompt('Qual è il tuo nome?');
 
 
-// se il nome rientra tra questi allora stampo "puoi accedere"
-const iscritti = ['marco', 'emanuele', 'luca'];
+const iscritti = ['marco@live.it', 'emanuele@gmail.com', 'luca@gmail.com'];
+
+let trovata = false
 
 for (let i = 0; i < iscritti.length; i++) {
-
-    let iscrizioni = document.querySelector('.iscrizioni')
-
-    if (askName == iscritti) {
-        iscrizioni.innerHTML += `<p>Puoi accedere</p>`
-    } else if (askName != iscritti) {
-        iscrizioni.innerHTML += `<p>Non puoi accedere</p>`
+    // controllo che la mail del prompt sia uguale a iscritti [i]
+    if (askEmail == iscritti[i]) {
+        trovata = true
     }
 
+
 }
+
+let iscrizioni = document.querySelector('.iscrizioni')
+
+if (trovata == true) {
+    iscrizioni.innerHTML += `<p>Puoi accedere</p>`
+} else {
+    iscrizioni.innerHTML += `<p>Non puoi accedere</p>`
+}
+

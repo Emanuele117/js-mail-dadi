@@ -47,4 +47,17 @@ if (trovata == true) {
 }
 
 
-document.getElementById('dado').innerHTML = Math.floor(Math.random() * 6) + 1;
+
+document.getElementById('dadoGiocatore').innerHTML = Math.floor(Math.random() * 6) + 1;
+document.getElementById('dadoComputer').innerHTML = Math.floor(Math.random() * 6) + 1;
+
+const giocatore = document.querySelector('dadoGiocatore');
+const computer = document.querySelector('dadoComputer');
+
+if (giocatore > computer) {
+    giocatore.innerHTML += `<p>Hai vinto!</p>`
+} else if (giocatore == computer) {
+    giocatore.innerHTML += `<p>Hai pareggiato!</p>`
+} else {
+    giocatore.innerHTML += `<p>Hai perso!</p>`
+}

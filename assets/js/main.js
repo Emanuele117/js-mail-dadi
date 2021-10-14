@@ -46,3 +46,5 @@ if (trovata == true) {
     iscrizioni.innerHTML += `<p>Non puoi accedere</p>`
 }
 
+
+document.getElementById('dado').innerHTML = Math.floor(Math.random() * 6) + 1;

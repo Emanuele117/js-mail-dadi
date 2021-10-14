@@ -51,8 +51,8 @@ if (trovata == true) {
 document.getElementById('dadoGiocatore').innerHTML = Math.floor(Math.random() * 6) + 1;
 document.getElementById('dadoComputer').innerHTML = Math.floor(Math.random() * 6) + 1;
 
-const giocatore = document.querySelector('dadoGiocatore');
-const computer = document.querySelector('dadoComputer');
+let giocatore = document.querySelector('.pGiocatore');
+let computer = document.querySelector('pComputer');
 
 if (giocatore > computer) {
     giocatore.innerHTML += `<p>Hai vinto!</p>`
